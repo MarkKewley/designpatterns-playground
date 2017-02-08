@@ -3,21 +3,14 @@ package structural.facade.improved;
 public class Client {
 
 	public static void main(String [] args){
-		
-		// initial setup
-        BillingSystem billingSystem = new BillingSystem();
-        InvoiceCustomerSystem invoiceCustomerSystem = new InvoiceCustomerSystem();
 
+        // This would be the true client perspective ///
+
+        // initial setup
         FinancialSystemFacade financialSystemFacade = new FinancialSystemFacade();
-        financialSystemFacade.setBillingSystem(billingSystem);
-        financialSystemFacade.setInvoiceCustomerSystem(invoiceCustomerSystem);
 
+        // execute command
         financialSystemFacade.createInvoice(1000);
-
-
-
-		
-		
 	}
 	
 }

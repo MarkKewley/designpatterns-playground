@@ -7,11 +7,14 @@ public class FinancialSystemFacade {
 
     private InvoiceCustomerSystem invoiceCustomerSystem;
 
-    public void createInvoice(Integer amount){
+    public FinancialSystemFacade() {
+        billingSystem = new BillingSystem();
+        invoiceCustomerSystem = new InvoiceCustomerSystem();
+    }
 
-        Bill bill = billingSystem.createBill(amount);
+    public void createInvoice(int amount) {
+        final Bill bill = billingSystem.createBill(amount);
         invoiceCustomerSystem.createInvoiceForBill(bill);
-
     }
 
 
