@@ -4,22 +4,18 @@ package structural.flyweight.improved;
 public class Client {
 
     public static void main(String[] args) {
-        WordProcessor processor = new WordProcessor();
+        final WordProcessor wordProcessor = new WordProcessor();
 
-        String textToAdd = "Hello i'm aaaa wwworddd pprocessorrrr";
-        int length = textToAdd.length();
+        final String textToAdd = "Hello i'm aaaa wwworddd pprocessorrrr";
 
+        final LetterFactory letterFactory = new LetterFactory();
 
-        LetterFactory factory = new LetterFactory();
-
-        for(int i = 0; i<length;i++){
-
-            String value = textToAdd.substring(i,i+1);
-            processor.addLetter(factory.createLetter(value));
-
+        for (final Character character : textToAdd.toCharArray()) {
+            wordProcessor.addLetter(letterFactory.createLetter(character));
         }
 
-        processor.printLetters();
+        wordProcessor.printLetters();
+
     }
 
 

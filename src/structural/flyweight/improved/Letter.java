@@ -3,14 +3,14 @@ package structural.flyweight.improved;
 
 public class Letter {
 
-    private String value;
+    private Character value;
 
-    public Letter(String value) {
+    public Letter(Character value) {
         System.out.println("New letter created with value: "+value);
         this.value = value;
     }
 
-    public String getValue() {
+    public Character getValue() {
         return value;
     }
 }
