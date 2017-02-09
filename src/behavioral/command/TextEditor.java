@@ -19,7 +19,17 @@ public class TextEditor {
         return text;
     }
 
+    // can't perform undo more than once!
     public void undo() {
         this.text = undoText;
+    }
+
+    public static void main(String[] args) {
+        final TextEditor textEditor = new TextEditor();
+        textEditor.addText("1234");
+        textEditor.clearText();
+        System.out.println("Text is: " + textEditor.getText());
+        textEditor.undo();
+        System.out.println("Text is: " + textEditor.getText());
     }
 }
