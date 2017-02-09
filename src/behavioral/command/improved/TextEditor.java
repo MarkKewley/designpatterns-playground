@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TextEditor {
-    private String text;
+    private String text = "";
 
     private Queue<Command> queue = new LinkedList<>();
 
@@ -41,10 +41,16 @@ public class TextEditor {
 
     public static void main(String[] args) {
         final TextEditor textEditor = new TextEditor();
-        textEditor.setText("1234");
-
+        AddTextCommand addTextCommand = new AddTextCommand(textEditor, "1234");
+        textEditor.executeAction(addTextCommand);
         ClearTextCommand command = new ClearTextCommand(textEditor);
         textEditor.executeAction(command);
+        System.out.println("Text is: " + textEditor.getText());
+        textEditor.undo();
+        System.out.println("Text is: " + textEditor.getText());
+
+        AddTextCommand addTextCommandTwo = new AddTextCommand(textEditor, "Woot");
+        textEditor.executeAction(addTextCommandTwo);
         System.out.println("Text is: " + textEditor.getText());
         textEditor.undo();
         System.out.println("Text is: " + textEditor.getText());
