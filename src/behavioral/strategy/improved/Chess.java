@@ -1,8 +1,6 @@
 package behavioral.strategy.improved;
 
 
-import behavioral.strategy.Difficulty;
-
 public class Chess {
 
     private ChessAlgorithm algorithm = new EasyChessAlgorithm();
