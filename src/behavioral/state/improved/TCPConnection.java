@@ -3,6 +3,7 @@ package behavioral.state.improved;
 
 public class TCPConnection {
 
+    // could've still used an ENUM here rather than an object
     private TCPConnectionState tcpConnectionState = new ClosedTCPConnectionState(this);
 
 

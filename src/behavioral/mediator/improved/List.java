@@ -8,13 +8,13 @@ public class List {
     private java.util.List<String> items = new ArrayList<String>();
 
 
-    private Screendirector screendirector;
+    private ScreenDirector screenDirector;
 
 
-    public void selectItem(int itemNumber){
+    public void selectItem(int itemNumber) {
         String item = items.get(itemNumber);
-        if(screendirector !=null){
-            screendirector.itemSelected(item);
+        if (screenDirector != null) {
+            screenDirector.itemSelected(item);
         }
     }
 
@@ -24,7 +24,7 @@ public class List {
     }
 
 
-    public void setScreendirector(Screendirector screendirector) {
-        this.screendirector = screendirector;
+    public void setScreenDirector(ScreenDirector screenDirector) {
+        this.screenDirector = screenDirector;
     }
 }

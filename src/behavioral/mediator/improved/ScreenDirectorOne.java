@@ -1,7 +1,8 @@
 package behavioral.mediator.improved;
 
 
-public class ScreenDirectorOne implements Screendirector{
+// Note this is not reusable, but that is the point they are coded for SPECIFIC scenarios
+public class ScreenDirectorOne implements ScreenDirector {
 
     private InputText inputText;
 
