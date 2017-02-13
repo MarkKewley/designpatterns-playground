@@ -5,7 +5,7 @@ public abstract class LoanCalculationAlgorithm {
 
 
     public int calculateLoan(){
-        return (int) (getBaseAmount()*getInterest()-caclulateDiscount());
+        return (int) (getBaseAmount() * getInterest() - calculateDiscount());
     }
 
 
@@ -13,5 +13,5 @@ public abstract class LoanCalculationAlgorithm {
 
     abstract double getInterest();
 
-    abstract int caclulateDiscount();
+    abstract int calculateDiscount();
 }

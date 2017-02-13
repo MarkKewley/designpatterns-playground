@@ -16,16 +16,14 @@ public class ConnectionSolver {
 
     }
 
-    public ConnectionSolverMemento createMemento(){
-        return new ConnectionSolverMemento(firstPoint,secondPoint);
+    public ConnectionSolverMomento createMomento() {
+        return new ConnectionSolverMomento(firstPoint, secondPoint);
     }
 
-
-    public void setMemento(ConnectionSolverMemento memento){
-        firstPoint = memento.getFirstPoint();
-        secondPoint = memento.getSecondPoint();
+    public void setMomento(ConnectionSolverMomento connectionSolverMomento) {
+        firstPoint = connectionSolverMomento.getFirstPoint();
+        secondPoint = connectionSolverMomento.getSecondPoint();
     }
-
 
     public void setFirstPoint(Point2D firstPoint) {
         this.firstPoint = firstPoint;

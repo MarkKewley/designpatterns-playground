@@ -15,7 +15,7 @@ public class CheapLoanCalculation extends LoanCalculationAlgorithm {
     }
 
     @Override
-    int caclulateDiscount() {
+    int calculateDiscount() {
         return 5000;
     }
 }

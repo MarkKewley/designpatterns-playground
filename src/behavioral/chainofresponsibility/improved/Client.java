@@ -12,7 +12,7 @@ public class Client {
         handler.setNextHandler(customerInfoCheckoutHandler);
 
 
-        handler.handlCheckout();
+        handler.handleCheckout();
 
 
 

@@ -8,6 +8,9 @@ public class List {
     private java.util.List<String> items = new ArrayList<String>();
 
 
+    // problem, multiple screens require a List, but not all of them need
+    // the InputText, so for all ov those Lists on other pages an InputText will
+    // be there which causes a lot of references.
     private InputText inputText;
 
 

@@ -1,7 +1,7 @@
 package behavioral.mediator.improved;
 
 
-public interface Screendirector {
+public interface ScreenDirector {
 
     void itemSelected(String item);
 

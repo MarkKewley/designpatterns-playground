@@ -15,7 +15,7 @@ public class ExpensiveLoanCalculation extends LoanCalculationAlgorithm {
     }
 
     @Override
-    int caclulateDiscount() {
+    int calculateDiscount() {
         return 100;
     }
 }

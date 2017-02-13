@@ -9,9 +9,9 @@ public class Client {
         InputText text = new InputText();
 
 
-        ScreenDirectorOne screendirector = new ScreenDirectorOne();
-        screendirector.setInputText(text);
-        list.setScreendirector(screendirector);
+        ScreenDirectorOne screenDirector = new ScreenDirectorOne();
+        screenDirector.setInputText(text);
+        list.setScreenDirector(screenDirector);
 
 
         list.getItems().add("Data item one");
